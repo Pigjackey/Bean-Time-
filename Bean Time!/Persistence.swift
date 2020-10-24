@@ -1,6 +1,6 @@
 //
 //  Persistence.swift
-//  What's For Dinner?
+//  Bean Time!
 //
 //  Created by Donovon Spencer on 10/23/20.
 //
@@ -31,7 +31,7 @@ struct PersistenceController {
     let container: NSPersistentCloudKitContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "What_s_For_Dinner_")
+        container = NSPersistentCloudKitContainer(name: "Bean_Time_")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

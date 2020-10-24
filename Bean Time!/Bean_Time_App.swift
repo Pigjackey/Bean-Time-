@@ -1,6 +1,6 @@
 //
-//  What_s_For_Dinner_App.swift
-//  What's For Dinner?
+//  Bean_Time_App.swift
+//  Bean Time!
 //
 //  Created by Donovon Spencer on 10/23/20.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct What_s_For_Dinner_App: App {
+struct Bean_Time_App: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
