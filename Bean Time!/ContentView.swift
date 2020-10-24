@@ -9,6 +9,11 @@ import SwiftUI
 import CoreData
 import AudioToolbox
 
+extension Color {
+  static let newBackgroundColor = Color("newBackground")
+  static let newTextColor = Color("newText")
+}
+
 struct ContentView: View {
   @Environment(\.managedObjectContext)
     private var viewContext
@@ -18,117 +23,38 @@ struct ContentView: View {
         animation: .default)
     private var items: FetchedResults<Item>
 
-  @State var color = Color.white
-  @State var progress = 0.0
+  @State var color = Color.newBackgroundColor
+  @State var message = "(Don't Push)"
+  var displayItems = ["Kidney", "Black", "Pinto", "Garbanzo", "Lima", "Red", "Butter", "White", "Giant", "Fake", "Dino", "Kidney", "Black", "Pinto", "Garbanzo", "Lima", "Red", "Butter", "White", "Giant", "Fake", "Dino"]
     
   var body: some View {
     ZStack {
       color.ignoresSafeArea()
-      ScrollView {
-        VStack {
-          Button(action: {
-            color = Color.red
-            AudioServicesPlaySystemSound (1104)
-            progress += 0.01
-          }) {
-            Text("Red")
-              .frame(minWidth: 0, maxWidth: .infinity)
-              .padding()
-              .foregroundColor(.white)
-              .background(LinearGradient(gradient: Gradient(colors: [.red, .red, .red, .orange]), startPoint: .top, endPoint: .bottom))
-              .cornerRadius(10)
-              .padding(.horizontal, 10)
-          }
-          Button(action: {
-            color = Color.orange
-            AudioServicesPlaySystemSound (1104)
-            progress += 0.01
-          }) {
-            Text("Orange")
-              .frame(minWidth: 0, maxWidth: .infinity)
-              .padding()
-              .foregroundColor(.white)
-              .background(LinearGradient(gradient: Gradient(colors: [.orange, .orange, .orange, .yellow]), startPoint: .top, endPoint: .bottom))
-              .cornerRadius(10)
-              .padding(.horizontal, 10)
-          }
-          Button(action: {
-            color = Color.yellow
-            AudioServicesPlaySystemSound (1104)
-            progress += 0.01
-          }) {
-            Text("Yellow")
-              .frame(minWidth: 0, maxWidth: .infinity)
-              .padding()
-              .foregroundColor(.black)
-              .background(LinearGradient(gradient: Gradient(colors: [.yellow, .yellow, .yellow, .green]), startPoint: .top, endPoint: .bottom))
-              .cornerRadius(10)
-              .padding(.horizontal, 10)
-          }
-          Button(action: {
-            color = Color.green
-            AudioServicesPlaySystemSound (1104)
-            progress += 0.01
-          }) {
-            Text("Green")
-              .frame(minWidth: 0, maxWidth: .infinity)
-              .padding()
-              .foregroundColor(.white)
-              .background(LinearGradient(gradient: Gradient(colors: [.green, .green, .green, .blue]), startPoint: .top, endPoint: .bottom))
-              .cornerRadius(10)
-              .padding(.horizontal, 10)
-          }
-          Button(action: {
-            color = Color.blue
-            AudioServicesPlaySystemSound (1104)
-            progress += 0.01
-          }) {
-            Text("Blue")
-              .frame(minWidth: 0, maxWidth: .infinity)
-              .padding()
-              .foregroundColor(.white)
-              .background(LinearGradient(gradient: Gradient(colors: [.blue, .blue, .blue, .purple]), startPoint: .top, endPoint: .bottom))
-              .cornerRadius(10)
-              .padding(.horizontal, 10)
-          }
-          Button(action: {
-            color = Color.purple
-            AudioServicesPlaySystemSound (1104)
-            progress += 0.01
-          }) {
-            Text("Purple")
-              .frame(minWidth: 0, maxWidth: .infinity)
-              .padding()
-              .foregroundColor(.white)
-              .background(LinearGradient(gradient: Gradient(colors: [.purple, .purple, .purple, .red]), startPoint: .top, endPoint: .bottom))
-              .cornerRadius(10)
-              .padding(.horizontal, 10)
-          }
-          Button(action: {
-            color = Color.white
-            AudioServicesPlaySystemSound (1104)
-            progress += 0.01
-          }) {
-            Text("White")
-              .frame(minWidth: 0, maxWidth: .infinity)
-              .padding()
-              .foregroundColor(.black)
-              .background(LinearGradient(gradient: Gradient(colors: [.white, .white, .white, .gray]), startPoint: .top, endPoint: .bottom))
-              .cornerRadius(10)
-              .padding(.horizontal, 10)
-          }
-          Button(action: {
-            color = Color.black
-            AudioServicesPlaySystemSound (1104)
-            progress += 0.01
-          }) {
-            Text("Black")
-              .frame(minWidth: 0, maxWidth: .infinity)
-              .padding()
-              .foregroundColor(.white)
-              .background(LinearGradient(gradient: Gradient(colors: [.black, .black, .black, .gray]), startPoint: .top, endPoint: .bottom))
-              .cornerRadius(10)
-              .padding(.horizontal, 10)
+      VStack {
+        Button(action: {
+          color = .red
+          message = "INTRUDER ALERT!"
+        }) {
+          Label("Beans! \(message)", systemImage: "42.circle")
+            .padding(.vertical, 20)
+            .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+            .foregroundColor(.newTextColor)
+        }
+
+        ScrollView {
+          ForEach(displayItems, id: \.self) { item in
+            Button(action: {
+              AudioServicesPlaySystemSound (1104)
+            }) {
+              Text("\(item)")
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .padding()
+                .foregroundColor(.newTextColor)
+                .overlay(RoundedRectangle(cornerRadius: 10)
+                  .stroke(Color.gray, lineWidth: 1))
+                  .padding(.horizontal, 15)
+
+            }
           }
         }
       }
