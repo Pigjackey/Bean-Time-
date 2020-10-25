@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		2C2B9A492543E0C70087C2D5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C2B9A482543E0C70087C2D5 /* AudioToolbox.framework */; };
 		2CD4A35E2543A064005BA44D /* Bean_Time_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4A35D2543A064005BA44D /* Bean_Time_App.swift */; };
-		2CD4A3602543A064005BA44D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4A35F2543A064005BA44D /* ContentView.swift */; };
+		2CD4A3602543A064005BA44D /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4A35F2543A064005BA44D /* InventoryView.swift */; };
 		2CD4A3622543A067005BA44D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CD4A3612543A067005BA44D /* Assets.xcassets */; };
 		2CD4A3652543A067005BA44D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CD4A3642543A067005BA44D /* Preview Assets.xcassets */; };
 		2CD4A3672543A067005BA44D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4A3662543A067005BA44D /* Persistence.swift */; };
 		2CD4A36A2543A067005BA44D /* Bean_Time_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CD4A3682543A067005BA44D /* Bean_Time_.xcdatamodeld */; };
+		2CE8387C2545075B004D5E22 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE8387B2545075B004D5E22 /* HomeView.swift */; };
+		2CE8388025450D90004D5E22 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CE8387F25450D90004D5E22 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C2B9A482543E0C70087C2D5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		2CC828412544A28800FCA491 /* Bean Time!.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bean Time!.entitlements"; sourceTree = "<group>"; };
+		2CC828422544A28800FCA491 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
 		2CD4A35A2543A064005BA44D /* Bean Time!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bean Time!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CD4A35D2543A064005BA44D /* Bean_Time_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bean_Time_App.swift; sourceTree = "<group>"; };
-		2CD4A35F2543A064005BA44D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2CD4A35F2543A064005BA44D /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
 		2CD4A3612543A067005BA44D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2CD4A3642543A067005BA44D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2CD4A3662543A067005BA44D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		2CD4A3692543A067005BA44D /* What_s_For_Dinner_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = What_s_For_Dinner_.xcdatamodel; sourceTree = "<group>"; };
 		2CD4A36B2543A067005BA44D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CE8387B2545075B004D5E22 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		2CE8387F25450D90004D5E22 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 		2C2B9A472543E0C70087C2D5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2CC828422544A28800FCA491 /* HomeKit.framework */,
 				2C2B9A482543E0C70087C2D5 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
@@ -68,9 +75,12 @@
 		2CD4A35C2543A064005BA44D /* Bean Time! */ = {
 			isa = PBXGroup;
 			children = (
+				2CC828412544A28800FCA491 /* Bean Time!.entitlements */,
 				2CD4A35D2543A064005BA44D /* Bean_Time_App.swift */,
-				2CD4A35F2543A064005BA44D /* ContentView.swift */,
+				2CE8387B2545075B004D5E22 /* HomeView.swift */,
+				2CD4A35F2543A064005BA44D /* InventoryView.swift */,
 				2CD4A3612543A067005BA44D /* Assets.xcassets */,
+				2CE8387F25450D90004D5E22 /* Colors.xcassets */,
 				2CD4A3662543A067005BA44D /* Persistence.swift */,
 				2CD4A36B2543A067005BA44D /* Info.plist */,
 				2CD4A3682543A067005BA44D /* Bean_Time_.xcdatamodeld */,
@@ -144,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CE8388025450D90004D5E22 /* Colors.xcassets in Resources */,
 				2CD4A3652543A067005BA44D /* Preview Assets.xcassets in Resources */,
 				2CD4A3622543A067005BA44D /* Assets.xcassets in Resources */,
 			);
@@ -158,7 +169,8 @@
 			files = (
 				2CD4A3672543A067005BA44D /* Persistence.swift in Sources */,
 				2CD4A36A2543A067005BA44D /* Bean_Time_.xcdatamodeld in Sources */,
-				2CD4A3602543A064005BA44D /* ContentView.swift in Sources */,
+				2CD4A3602543A064005BA44D /* InventoryView.swift in Sources */,
+				2CE8387C2545075B004D5E22 /* HomeView.swift in Sources */,
 				2CD4A35E2543A064005BA44D /* Bean_Time_App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Bean Time!/Bean Time!.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bean Time!/Preview Content\"";
 				DEVELOPMENT_TEAM = N34V35YPTX;
@@ -309,6 +322,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Bean Time!/Bean Time!.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bean Time!/Preview Content\"";
 				DEVELOPMENT_TEAM = N34V35YPTX;

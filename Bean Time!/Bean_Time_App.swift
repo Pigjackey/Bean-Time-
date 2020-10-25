@@ -7,13 +7,19 @@
 
 import SwiftUI
 
+extension Color {
+  static let customBackground = Color("customBackground")
+  static let customText = Color("customText")
+  static let listColor = Color("listColor")
+}
+
 @main
 struct Bean_Time_App: App {
     let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
